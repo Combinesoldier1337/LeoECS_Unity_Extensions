@@ -9,10 +9,8 @@ public class GameStateViewer : MonoBehaviour
 {
     [SerializeField]
     private GameState _gameState = null;
-    private EcsWorld _world = null;    
-    public void Init(GameState state, EcsWorld world)
+    public void Init(GameState state)
     {
         _gameState = state;
-        _world = world;
     }
 }

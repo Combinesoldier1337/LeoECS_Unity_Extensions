@@ -1,0 +1,144 @@
+﻿using Leopotam.EcsLite;
+using Leopotam.EcsLite.Di;
+using Leopotam.EcsLite.ExtendedSystems;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace #NS# {
+    sealed class #SCRIPTNAME# : MonoBehaviour {
+IEcsSystems _permanentSystems, _beforeStartSystems, _playSystems, _winSystems, _loseSystems, _delHereSystems, _afterAllSystems;
+        EcsWorld _world;
+        GameState _state = null;
+        void Start () {
+            _world = new EcsWorld ();
+            _world = new EcsWorld();
+            _state = new GameState(_world);
+            _permanentSystems = new EcsSystems(_world, _state);
+            _beforeStartSystems = new EcsSystems(_world, _state);
+            _playSystems = new EcsSystems(_world, _state);
+            _winSystems = new EcsSystems(_world, _state);
+            _loseSystems = new EcsSystems(_world, _state);
+            _delHereSystems = new EcsSystems(_world, _state);
+            _afterAllSystems = new EcsSystems(_world, _state);
+
+            _permanentSystems
+                .Add(new InitInput())
+                .Add(new InitPlayer())
+                .Add(new InitInterface())
+
+                .Add(new EnableBeforeStartLevelSystem())
+                .Add(new EnablePlaySystems())
+                .Add(new EnableWinSystems())
+                .Add(new EnableLoseSystems())
+
+                .Add(new InputSystem())
+                ;
+
+            _beforeStartSystems
+                .Add(new BeforeStartSystem())
+                ;
+
+            _playSystems
+                .Add(new PlaySystem())
+                ;
+
+            _winSystems
+                .Add(new WinSystem())
+                ;
+
+            _loseSystems
+                .Add(new LoseSystem())
+                ;
+
+            _afterAllSystems
+                .Add(new AfterAllSystem())
+                ;
+
+            _delHereSystems
+                .DelHere<DelEvent>()
+                ;
+
+#if UNITY_EDITOR
+            _permanentSystems.Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem(null, true, "0"));
+#endif
+
+            _permanentSystems.Inject();
+            _permanentSystems.Init();
+            _beforeStartSystems.Inject();
+            _beforeStartSystems.Init();
+            _playSystems.Inject();
+            _playSystems.Init();
+            _winSystems.Inject();
+            _winSystems.Init();
+            _loseSystems.Inject();
+            _loseSystems.Init();
+            _afterAllSystems.Inject();
+            _afterAllSystems.Init();
+            _delHereSystems.Inject();
+            _delHereSystems.Init();
+        }
+
+        void Update()
+        {
+            _permanentSystems?.Run();
+            if (_state.IsBeforeSystems) _beforeStartSystems.Run();
+            if (_state.IsPlaySystems) _playSystems?.Run();
+            if (_state.IsWinSystems) _winSystems?.Run();
+            if (_state.IsLoseSystems) _loseSystems?.Run();
+            _afterAllSystems?.Run();
+            _delHereSystems?.Run();
+        }
+
+        void OnDestroy()
+        {
+            if (_permanentSystems != null)
+            {
+                _permanentSystems.Destroy();
+                _permanentSystems = null;
+            }
+
+            if (_beforeStartSystems != null)
+            {
+                _beforeStartSystems.Destroy();
+                _beforeStartSystems = null;
+            }
+
+            if (_playSystems != null)
+            {
+                _playSystems.Destroy();
+                _playSystems = null;
+            }
+
+            if (_winSystems != null)
+            {
+                _winSystems.Destroy();
+                _winSystems = null;
+            }
+
+            if (_loseSystems != null)
+            {
+                _loseSystems.Destroy();
+                _loseSystems = null;
+            }
+
+            if (_afterAllSystems != null)
+            {
+                _afterAllSystems.Destroy();
+                _afterAllSystems = null;
+            }
+
+            if (_delHereSystems != null)
+            {
+                _delHereSystems.Destroy();
+                _delHereSystems = null;
+            }
+
+            if (_world != null)
+            {
+                _world.Destroy();
+                _world = null;
+            }
+        }
+
+    }
+}

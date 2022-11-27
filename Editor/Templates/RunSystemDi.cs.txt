@@ -7,8 +7,8 @@ namespace #NS# {
     {
         readonly EcsWorldInject _world = default;
         readonly EcsSharedInject<GameState> _state = default;
-        readonly EcsFilterInject<Inc<ReloadEvent>> _filter = default;
-        readonly EcsPoolInject<ReloadEvent> _compPool = default;
+        readonly EcsFilterInject<Inc<CustomEvent>> _filter = default;
+        readonly EcsPoolInject<Component> _compPool = default;
         public void Run(IEcsSystems systems)
         {
             foreach (var entity in _filter.Value)

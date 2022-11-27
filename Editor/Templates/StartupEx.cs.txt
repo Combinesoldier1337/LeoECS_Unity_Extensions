@@ -22,40 +22,40 @@ IEcsSystems _permanentSystems, _beforeStartSystems, _playSystems, _winSystems, _
             _afterAllSystems = new EcsSystems(_world, _state);
 
             _permanentSystems
-                .Add(new InitInput())
-                .Add(new InitPlayer())
-                .Add(new InitInterface())
+                //.Add(new InitInput())
+                //.Add(new InitPlayer())
+                //.Add(new InitInterface())
 
-                .Add(new EnableBeforeStartLevelSystem())
-                .Add(new EnablePlaySystems())
-                .Add(new EnableWinSystems())
-                .Add(new EnableLoseSystems())
+                //.Add(new EnableBeforeStartLevelSystem())
+                //.Add(new EnablePlaySystems())
+                //.Add(new EnableWinSystems())
+                //.Add(new EnableLoseSystems())
 
-                .Add(new InputSystem())
+                //.Add(new InputSystem())
                 ;
 
             _beforeStartSystems
-                .Add(new BeforeStartSystem())
+                //.Add(new BeforeStartSystem())
                 ;
 
             _playSystems
-                .Add(new PlaySystem())
+                //.Add(new PlaySystem())
                 ;
 
             _winSystems
-                .Add(new WinSystem())
+                //.Add(new WinSystem())
                 ;
 
             _loseSystems
-                .Add(new LoseSystem())
+                //.Add(new LoseSystem())
                 ;
 
             _afterAllSystems
-                .Add(new AfterAllSystem())
+                //.Add(new AfterAllSystem())
                 ;
 
             _delHereSystems
-                .DelHere<DelEvent>()
+                //.DelHere<DelEvent>()
                 ;
 
 #if UNITY_EDITOR

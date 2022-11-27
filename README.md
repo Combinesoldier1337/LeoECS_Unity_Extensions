@@ -7,7 +7,7 @@ LeoECS Unity Extensions (Di)
 # GameStateViewer
  Поля меняются/можно менять в реалтайме из инспектора
  
- ⚠️GameStateViewer нужно инитить⚠️❗❗❗
+ ⚠️GameStateViewer нужно инитить⚠️
  Если GameState уже есть в проекте, нужно дописать [System.Serializable] перед объявлением класса GameState 
 # ![Снимок экрана (234)](https://user-images.githubusercontent.com/60045146/204161686-37f5f8d4-4b30-47da-a1a6-4ab6856df252.png)
 

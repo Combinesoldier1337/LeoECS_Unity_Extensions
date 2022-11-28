@@ -4,7 +4,7 @@
     "displayName": "LeoECS Lite Unity Extensions",
     "description": "LeoECS Lite Unity Extensions - Добавляет заполненные под LeoEscDi шаблоны.",
     "unity": "2020.3",
-    "version": "2022.11.27",
+    "version": "2022.11.28",
     "keywords": [
         "leoecs",
         "ecs",

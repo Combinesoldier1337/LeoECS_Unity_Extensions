@@ -1,10 +1,10 @@
 {
-    "name": "com.leopotam.ecslite.unityeditor",
-    "author": "Leopotam",
-    "displayName": "LeoECS Lite Unity Integration",
-    "description": "LeoECS Lite - Интеграция в редактор юнити содержит шаблоны кода, а так же предоставляет мониторинг состояния мира.",
+    "name": "com.cmb.ecslite.unityeditorextensions",
+    "author": "combine_soldier",
+    "displayName": "LeoECS Lite Unity Extensions",
+    "description": "LeoECS Lite Unity Extensions - Добавляет заполненные под LeoEscDi шаблоны.",
     "unity": "2020.3",
-    "version": "2022.7.22",
+    "version": "2022.11.27",
     "keywords": [
         "leoecs",
         "ecs",
@@ -15,6 +15,6 @@
     "dependencies": {},
     "repository": {
         "type": "git",
-        "url": "https://github.com/Leopotam/ecslite-unityeditor.git"
+        "url": "https://github.com/Combinesoldier1337/LeoECS_Unity_Extensions.git"
     }
 }

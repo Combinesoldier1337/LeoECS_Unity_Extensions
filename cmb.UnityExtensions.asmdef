@@ -1,6 +1,6 @@
 {
-    "name": "Leopotam.EcsLite.ExtendedSystems",
-    "rootNamespace": "Leopotam.EcsLite.ExtendedSystems",
+    "name": "cmb.UnityExtension",
+    "rootNamespace": "cmb.UnityExtension",
     "references": [
         "Leopotam.EcsLite"
     ],

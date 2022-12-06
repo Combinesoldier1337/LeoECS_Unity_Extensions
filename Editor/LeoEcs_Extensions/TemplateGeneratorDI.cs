@@ -68,7 +68,7 @@ namespace Leopotam.EcsLite.UnityEditor.Templates
                 (name) => CreateTemplateInternal(GetTemplateContent(RunSystemDiTemplate), name));
         }
 
-        [MenuItem("Assets/Create/LeoECS Lite/Create GameState from template", false, -192)]
+        [MenuItem("Assets/Create/LeoECS Lite/Create [GameState] from template", false, -192)]
         static void CreateGameStateExTpl()
         {
             CreateAndRenameAsset($"{GetAssetPath()}/GameState.cs", GetIcon(),

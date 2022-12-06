@@ -1,0 +1,46 @@
+using UnityEngine;
+using Leopotam.EcsLite;
+using UnityEditor;
+
+namespace cmb
+{
+    [System.Serializable]
+    public class GameState
+    {
+        //public EcsWorld EcsWorld;
+        //public Saves Saves = new Saves();        
+
+        #region Entities
+        public int InputEntity;
+        public int PlayerEntity;
+        public int InterfaceEntity;
+        #endregion
+
+        public int Money;
+        public int PlayerHP;
+
+        //public GameState(in EcsStartup ecsStartup)
+        //{
+        //    Saves.InitSave();
+        //    EcsWorld = ecsStartup.World;
+        //}
+
+        #region Layers
+        public LayerMask PlayerLayer = LayerMask.GetMask("Player");
+        public int PlayerLayerValue = 6;
+
+        public LayerMask UILayer = LayerMask.GetMask("UI");
+        public int UILayerValue = 5;
+        #endregion
+
+        #region Tags
+        public string PlayerTag = "Player";
+        #endregion
+
+        #region CustomMethods
+        
+        #endregion
+
+
+    }
+}

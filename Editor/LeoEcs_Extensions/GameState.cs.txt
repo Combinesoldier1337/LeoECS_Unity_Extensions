@@ -2,8 +2,6 @@ using UnityEngine;
 using Leopotam.EcsLite;
 using UnityEditor;
 
-namespace cmb
-{
     [System.Serializable]
     public class GameState
     {
@@ -43,4 +41,4 @@ namespace cmb
 
 
     }
-}
+

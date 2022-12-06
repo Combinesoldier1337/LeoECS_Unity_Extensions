@@ -2,6 +2,8 @@ using UnityEngine;
 using Leopotam.EcsLite;
 using UnityEditor;
 
+namespace Client
+{
     [System.Serializable]
     public class GameState
     {
@@ -41,4 +43,4 @@ using UnityEditor;
 
 
     }
-
+}

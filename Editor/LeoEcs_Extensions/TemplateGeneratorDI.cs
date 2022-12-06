@@ -19,6 +19,7 @@ namespace Leopotam.EcsLite.UnityEditor.Templates
         const string StartupTemplate = "StartupEx.cs.txt";
 
         const string GameStateTemplate = "GameState.cs.txt";
+        const string GameStateViewerTemplate = "GameStateViewer.cs.txt";
 
         [MenuItem("Assets/Create/LeoECS Lite/Create [EcsStartup.cs]", false, -201)]
         static void CreateStartupTpl()
@@ -73,6 +74,12 @@ namespace Leopotam.EcsLite.UnityEditor.Templates
         {
             CreateAndRenameAsset($"{GetAssetPath()}/GameState.cs", GetIcon(),
                 (name) => CreateTemplateInternal(GetTemplateContent(GameStateTemplate), name));
+        }
+        [MenuItem("Assets/Create/LeoECS Lite/Create [GameStateViewer] from template", false, -191)]
+        static void CreateGameStateViewerTpl()
+        {
+            CreateAndRenameAsset($"{GetAssetPath()}/GameStateViewer.cs", GetIcon(),
+                (name) => CreateTemplateInternal(GetTemplateContent(GameStateViewerTemplate), name));
         }
         public static string CreateTemplate(string proto, string fileName)
         {

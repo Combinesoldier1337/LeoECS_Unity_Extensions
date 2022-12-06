@@ -1,0 +1,20 @@
+{
+    "name": "com.cmb.ecslite.unityeditorextensions",
+    "author": "combine_soldier",
+    "displayName": "LeoECS Lite Unity Extensions",
+    "description": "LeoECS Lite Unity Extensions - Добавляет заполненные под LeoEscDi шаблоны.",
+    "unity": "2020.3",
+    "version": "2022.11.28",
+    "keywords": [
+        "leoecs",
+        "ecs",
+        "performance",
+        "unity",
+        "integration"
+    ],
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Combinesoldier1337/LeoECS_Unity_Extensions.git"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "LeoEcs_Unity_Extensions",
+    "rootNamespace": "cmb.LeoEcs_Unity_Extensions",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
